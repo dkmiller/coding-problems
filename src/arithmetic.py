@@ -26,7 +26,8 @@ def number_of_ways_to_climb_staircase(n: int, x: Set[int] = set([1, 2])) -> int:
     3, 5}, you could climb 1, 3, or 5 steps at a time. Generalize your function
     to take in X.
 
-    Taken from: https://www.dailycodingproblem.com/ , but apppears in many other
-    places. This is a very standard coding problem.
+    Taken from: https://www.dailycodingproblem.com/blog/staircase-problem/ , but
+    apppears in many other places. This is a very standard problem.
     """
-    pass
+    assert all(y > 0 for y in x)
+    return 1
