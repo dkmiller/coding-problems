@@ -1,12 +1,12 @@
 import pytest
-from src.arithmetic import number_of_ways_to_climb_staircase
+from src import arithmetic
 
 
 @pytest.mark.parametrize('n,expected', [
     (4, 5)
 ])
 def test_default_number_of_ways_to_climb_staircase(n,expected):
-    result = number_of_ways_to_climb_staircase(n)
+    result = arithmetic.number_of_ways_to_climb_staircase(n)
     assert expected == result
 
 
@@ -14,5 +14,5 @@ def test_default_number_of_ways_to_climb_staircase(n,expected):
     (4, set([1, 2]), 5)
 ])
 def test_number_of_ways_to_climb_staircase(n,x,expected):
-    result = number_of_ways_to_climb_staircase(n, x)
+    result = arithmetic.number_of_ways_to_climb_staircase(n, x)
     assert expected == result
